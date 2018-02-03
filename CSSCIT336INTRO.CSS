@@ -1,0 +1,48 @@
+<html>
+<head></head>
+
+
+<style>
+h2
+{
+	color:purple;
+}
+
+a
+{
+	color:purple;
+	font-size: 20;
+}
+
+td
+{
+	background-color: white;
+	opacity: .7;
+	font-family: cursive;
+	font-size: 12pt;
+	height:850px;
+	width:800px;
+}
+
+table
+{
+	text-align: center;
+}
+
+img
+{
+	text-align: center;
+}
+
+html 
+{ 
+  background: url(https://public-media.smithsonianmag.com/filer/78/93/7893029e-19ca-490a-a698-98ec804c7b97/istock-831508784.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+
+</html>
