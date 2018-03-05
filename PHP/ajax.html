@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<form method="post">
+    <p>
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" id="gender">
+    </p>
+    <p>
+        <label for="animal">Animal:</label>
+        <input type="text" name="animal" id="animal">
+    </p>
+    <p>
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color">
+    </p>
+
+        <p>
+        <label for="car">Car:</label>
+        <input type="text" name="car" id="car">
+    </p>
+
+    <input type="submit" value="Submit" onclick="addtoDB()">
+</form>
+
+<p id=”submitted></p>
+
+
+<script>
+function addtoDB() {
+  var xhttp; 
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        document.getElementById("submitted").innerHTML = "form submitted";
+    }
+  };
+
+  var gender = document.getElementById('gender').value;
+   var animal = document.getElementById('animal').value;
+   var color = document.getElementById('color').value;
+   var car = document.getElementById('car').value;
+   var queryString = "?gender=" + gender+  "&animal=" + animal + "&color=" + color + "&car=" + car;
+   console.log(queryString);
+   xhttp.open("GET", "insert.php" + queryString, true);
+   xhttp.send(null); 
+
+
+}
+</script>
+</body>
+</html>
