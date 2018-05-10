@@ -1,0 +1,36 @@
+<html>
+<head></head>
+
+<style>
+h2
+{
+	color:maroon;
+	font-family: baskerville;
+}
+
+html
+{	
+	background-image: url("ipad.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center; 
+    background-size: 550px;
+	text-align: center;	
+}
+
+form
+{
+	background-image: url("boookborder.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center; 
+    background-size: 450px;
+    text-align: center;
+	font-family: cursive;
+	font-size: 12pt;
+}
+
+
+
+</style>
+</html>
