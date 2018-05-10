@@ -33,9 +33,9 @@ $link = mysqli_connect("localhost", "root", "root", "books");
 
 
 if ($link->connect_error) {
-    die("Could not connect");
+    die("Could not connect: " . $link->connect_error);
 } 
-echo "Connected successfully";
+
 echo '<br>'; echo '<br>';
 echo '<br>'; echo '<br>';
 
@@ -43,8 +43,9 @@ echo '<br>'; echo '<br>';
 if(mysqli_query($link, $sql)){
 	echo "<h3>Here is the list of all the books you have read:</h3>";
 
-} else{
-    echo "ERROR: Could not execute";
+} 
+else{
+    echo "ERROR: Could not execute $sql" . $link->connect_error);
 }
   
  if(mysqli_num_rows($result) > 0){ 
