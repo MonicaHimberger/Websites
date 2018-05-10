@@ -27,21 +27,14 @@ $username = "root";
 $password = "root";
 
 $link = new mysqli($servername, $username, $password);
-if ($link->connect_error) {
-    die("Could not connect: " . $link->connect_error); }
-echo "Connected successfully";
+if ($link->connect_error) 
 
 echo '<br>'; echo '<br>';
 echo '<br>'; echo '<br>';
 
+echo "<h3>Here is the list of all the books you have read:</h3>";
 
-if(mysqli_query($link, $sql)){
-	echo "<h3>Here is the list of all the books you have read:</h3>";
 
-} 
-else{
-    echo "ERROR: Was not able to execute $sql. " . mysqli_error($link);
-}
   
  if(mysqli_num_rows($result) > 0){ 
 
