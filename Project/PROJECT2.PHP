@@ -28,8 +28,7 @@ $password = "root";
 
 $link = new mysqli($servername, $username, $password);
 if ($link->connect_error) {
-    die("Could not connect: " . $link->connect_error);
-} 
+    die("Could not connect: " . $link->connect_error); }
 echo "Connected successfully";
 
 echo '<br>'; echo '<br>';
@@ -41,7 +40,7 @@ if(mysqli_query($link, $sql)){
 
 } 
 else{
-    echo "ERROR: Could not execute $sql" . $link->connect_error);
+    echo "ERROR: Was not able to execute $sql. " . mysqli_error($link);
 }
   
  if(mysqli_num_rows($result) > 0){ 
