@@ -22,19 +22,15 @@ html
 </html>
 
 <?php
-
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "books";
-/* opening an attempt to connecting to MYSQL server databse with defult settings */
 
-$link = mysqli_connect("localhost", "root", "root", "books");
-
-
+$link = new mysqli($servername, $username, $password);
 if ($link->connect_error) {
     die("Could not connect: " . $link->connect_error);
 } 
+echo "Connected successfully";
 
 echo '<br>'; echo '<br>';
 echo '<br>'; echo '<br>';
